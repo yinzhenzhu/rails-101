@@ -3,4 +3,7 @@ class Account::PostsController < ApplicationController
   def index
     @posts = current_user.posts
   end
+  def edit
+    @post = Post.find(params[group :id])
+  end
 end
